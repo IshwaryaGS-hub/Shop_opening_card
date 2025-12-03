@@ -1,0 +1,130 @@
+ /* Body & Background */
+  body {
+    background: linear-gradient(135deg, #5a189a, #7b2cbf, #9d4edd);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+  }
+
+  /* Floating Sparkles */
+  .sparkle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 0.7;}
+    50% { transform: translateY(-80px) scale(1.3); opacity: 0.4;}
+    100% { transform: translateY(0) scale(1); opacity: 0.7;}
+  }
+
+  /* Invite Card */
+  .invite-card {
+    background: #fff;
+    border-radius: 25px;
+    padding: 50px 35px;
+    text-align: center;
+    max-width: 650px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    animation: fadeIn 1.2s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .invite-card:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.15), transparent);
+    transform: rotate(30deg);
+    animation: shine 6s infinite linear;
+  }
+
+  @keyframes shine {
+    0% { transform: translateX(-200%) rotate(30deg); }
+    100% { transform: translateX(200%) rotate(30deg); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Typography */
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #5a189a;
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: #6a0572;
+    margin-bottom: 15px;
+  }
+
+  .divider {
+    width: 100px;
+    height: 4px;
+    background: #7b2cbf;
+    margin: 15px auto;
+    border-radius: 2px;
+  }
+
+  .owner {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #9d4edd;
+    margin-top: 10px;
+  }
+
+  .countdown-box {
+    background: #f8f0ff;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    color: #5a189a;
+    font-weight: 700;
+    margin-top: 20px;
+    border: 2px solid #e6d4ff;
+    transition: 0.3s;
+  }
+
+  .countdown-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(157,78,221,0.3);
+  }
+
+  .btn-custom {
+    background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 1.15rem;
+    margin-top: 25px;
+    transition: 0.3s;
+  }
+
+  .btn-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(157, 78, 221, 0.5);
+  }
+
+  p, li {
+    color: #5a189a;
+  }
